@@ -1,0 +1,8 @@
+{
+    "require": {
+        "lcobucci/jwt": "^3.3",
+        "phpdocumentor/reflection-docblock": "^5.2",
+        "phpdocumentor/reflection": "^4.0",
+        "topthink/think-orm": "^2.0"
+    }
+}
