@@ -8,17 +8,12 @@ class ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '9b552a3cc426e3287cc811caefa3cf53' => __DIR__ . '/..' . '/topthink/think-helper/src/helper.php',
         '256c1545158fc915c75e51a931bdba60' => __DIR__ . '/..' . '/lcobucci/jwt/compat/class-aliases.php',
         '0d273777b2b0d96e49fb3d800c6b0e81' => __DIR__ . '/..' . '/lcobucci/jwt/compat/json-exception-polyfill.php',
         'd6b246ac924292702635bb2349f4a64b' => __DIR__ . '/..' . '/lcobucci/jwt/compat/lcobucci-clock-polyfill.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        't' => 
-        array (
-            'think\\' => 6,
-        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -34,7 +29,6 @@ class ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8
         ),
         'P' => 
         array (
-            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'PhpParser\\' => 10,
         ),
@@ -45,11 +39,6 @@ class ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8
     );
 
     public static $prefixDirsPsr4 = array (
-        'think\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/topthink/think-helper/src',
-            1 => __DIR__ . '/..' . '/topthink/think-orm/src',
-        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -68,10 +57,6 @@ class ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Psr\\SimpleCache\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -86,11 +71,16 @@ class ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6ead7fb373c68d0a870433a8221c3be8::$classMap;
 
         }, null, ClassLoader::class);
     }
