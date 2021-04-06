@@ -9,5 +9,14 @@
         "lcobucci/jwt": "^3.3",
         "phpdocumentor/reflection-docblock": "^5.2",
         "phpdocumentor/reflection": "^4.0"
+    },
+    "authors": [{
+        "name": "deadlymous",
+        "email": "2632324841@qq.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Auth\\": "Auth/"
+        }
     }
 }
