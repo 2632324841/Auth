@@ -1,4 +1,9 @@
 {
+    "name": "deadlymous/jwt",
+    "type": "lib",
+    "description": "JSON WEB TOKEN",
+    "keywords": ["jwt"],
+    "license": "MIT",
     "require": {
         "lcobucci/jwt": "^3.3",
         "phpdocumentor/reflection-docblock": "^5.2",
